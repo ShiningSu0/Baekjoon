@@ -63,7 +63,7 @@ def bfs(start_row, start_col,visited):
                     queue.append([r, c,block])
                 if block and ary[r][c]==1 and wall[r][c]==0:
                     wall[r][c]=1+visited[row][col]
-                    queue.append([r,c,0])
+                    queue.append([r,c,0] )
                 
 
 ans=[]
