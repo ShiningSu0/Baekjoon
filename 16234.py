@@ -31,7 +31,7 @@ while True:
     IsTrue=False
     visited=[[0]*N for i in range(N)]
     for i in range(N):
-        for j in range(N):
+        for j in range(N):# 이 부분을 필요한 부분만 체크하게 하면 개선 가능할 거 같은데..
             if visited[i][j]==0:
                 visited[i][j]=1
                 values=bfs(i,j,visited)
