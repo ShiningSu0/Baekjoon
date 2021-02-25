@@ -32,7 +32,7 @@ def bfs(start_row,start_col,visited):
                     babyshark=[visited[r][c],r,c]
                   #  print('걸림',babyshark)
                     candidate.append(babyshark)
-    if len(candidate)==0:
+    if len(candidate)==0:  
         flag=False
         return 0
         
