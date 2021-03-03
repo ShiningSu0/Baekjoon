@@ -11,13 +11,16 @@ while True:
     pivot=2*N-cnt
     
     cumul=0
-    #robot[(pivot+N-1)%(2*N)]=0
+    robot[(pivot+N-1)%(2*N)]=0
     #print(1,belt,robot)
-    for i in range(1,N-1):
+    visited=[0]*(2*N)
+    #visited[pivot]
+    for i in range(N-1):
       #  print(i,robot)
         temp=(pivot+i)%(2*N)
-        if robot[temp]==1 and robot[(temp+1)%(2*N)]==0 and belt[(temp+1)%(2*N)]>=1:
-            robot[temp]=0                
+        if robot[temp]==1 and robot[(temp+1)%(2*N)]==0 and belt[(temp+1)%(2*N)]>=1 and visited[i]==0 and visited[(temp+1)%(2*N)]==0:
+            robot[temp]=0
+            visited[i+1]=1                
             robot[(temp+1)%(2*N)]=1
             belt[(temp+1)%(2*N)]-=1
     
