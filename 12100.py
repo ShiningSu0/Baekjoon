@@ -19,14 +19,17 @@ def isPossible(ary_h,aryqueue):
             b.append(ary_h[j][i])
         ary_v.append(b)
     #print(ary_v)
+    ary_h_right=[]
     for i in range(N):
         while 0 in ary_h[i]:
-            ary_h[i].pop(ary_h[i].index(0))
+            ary_h_cnt+=1
+            ary_h_right.append(ary_h[i].pop(ary_h[i].index(0)))
         for j in range(0,len(ary_h[i])-1):
             if ary_h[i][j]==ary_h[i][j+1] and ary_h[i][j]!=0:
                 print('걸림')
-                possible_queue.append(0)#0 -> 좌우
+                possible_queue.append(0)#0 -> 좌
                 break
+            
 
     for i in range(N):
         while 0 in ary_v[i]:
