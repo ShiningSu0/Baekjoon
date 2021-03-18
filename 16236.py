@@ -57,4 +57,4 @@ while flag:
     visited=[[0]*N for i in range(N)]
     bfs(babyshark[1],babyshark[2],visited)
 
-print(answer)
+print(answer) 
